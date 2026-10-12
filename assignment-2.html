@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Quest</title>
+
+   
+</head>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+}
+.game-header {
+    background-color: #4b3f72;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.game-header h1 {
+    margin: 0;
+    color: yellow;
+}
+.game-info {
+    display: flex;
+    gap: 15px;
+}
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+}
+main {
+    width: 90%;
+    margin: 20px auto;
+}
+.game-area {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+.game-area h2 {
+    text-align: center;
+    color: yellow;
+}
+.game-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+.player {
+    background-color: #6c63ff;
+    padding: 15px;
+    border-radius: 5px;
+}
+.star {
+    background-color: gold;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+}
+.platform {
+    background-color: green;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+.platform-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.platform-row .platform {
+    flex: 1;
+}
+.game-message {
+    text-align: center;
+}
+.game-panels {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.panel {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+}
+.panel h2 {
+    color: yellow;
+}
+.control-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 5px;
+}
+.control-row button {
+    font-size: 20px;
+}
+.jump-button {
+    display: block;
+    margin: 15px auto;
+    background-color: #ff5555;
+    color: white;
+}
+.inventory-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.item {
+    background-color: #4b3f72;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+}
+.quest-item {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #4b3f72;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+footer {
+    background-color: #4b3f72;
+    text-align: center;
+    padding: 15px;
+}
+@media (max-width: 700px) {
+
+    .game-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .game-panels {
+        flex-direction: column;
+    }
+}
+</style>
+<body>
+    <header class="game-header">
+
+        <h1>Flexbox Quest</h1>
+
+        <div class="game-info">
+            <span>Lives: 3</span>
+            <span>Coins: 120</span>
+            <span>Level: 1</span>
+        </div>
+
+        <div class="header-buttons">
+            <button>Pause</button>
+            <button>Menu</button>
+        </div>
+    </header>
+
+
+    <main>
+
+       
+        <section class="game-area">
+
+            <h2>GAME AREA</h2>
+
+            <div class="game-row">
+                <div class="player">PLAYER</div>
+                <div class="star">STAR</div>
+            </div>
+
+            <div class="platform">
+                PLATFORM
+            </div>
+
+            <div class="platform-row">
+                <div class="platform">PLATFORM</div>
+                <div class="platform">PLATFORM</div>
+            </div>
+
+            <p class="game-message">
+                Collect all the stars!
+            </p>
+
+        </section>
+
+
+        
+        <section class="game-panels">
+
+           
+            <div class="panel controls">
+
+                <h2>Controls</h2>
+
+                <div class="control-row">
+                    <button>↑</button>
+                </div>
+
+                <div class="control-row">
+                    <button>←</button>
+                    <button>↓</button>
+                    <button>→</button>
+                </div>
+
+                <button class="jump-button">JUMP</button>
+
+            </div>
+
+
+            
+            <div class="panel inventory">
+
+                <h2>Inventory</h2>
+
+                <div class="inventory-items">
+
+                    <div class="item"> Sword</div>
+                    <div class="item"> Shield</div>
+                    <div class="item"> Potion</div>
+                    <div class="item"> Key</div>
+                    <div class="item"> Bow</div>
+                    <div class="item"> Map</div>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="panel quest">
+
+                <h2>Quest</h2>
+
+                <div class="quest-item">
+                    <span>Collect 3 Stars</span>
+                    <span>1 / 3</span>
+                </div>
+
+                <div class="quest-item">
+                    <span>Find the Golden Key</span>
+                    <span>0 / 1</span>
+                </div>
+
+                <div class="quest-item">
+                    <span>Defeat the Monster</span>
+                    <span>0 / 1</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    
+    <footer>
+        <p>Flexbox Quest • Made with HTML & CSS</p>
+    </footer>
+
+</body>
+
+</html>
